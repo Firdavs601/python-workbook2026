@@ -1,4 +1,4 @@
-import pytest
+import pytest  # type: ignore[reportMissingImports]
 
 
 @pytest.mark.parametrize(
