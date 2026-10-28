@@ -1,13 +1,14 @@
-from math import sin, cos, acos, radians
+import math
 
 def distance_earth(lat1, lon1, lat2, lon2):
-    phi1 = radians(lat1)
-    phi2 = radians(lat2)
-    lam1 = radians(lon1)
-    lam2 = radians(lon2)
-
-    cos_angle = sin(phi1) * sin(phi2) + cos(phi1) * cos(phi2) * cos(lam1 - lam2)
-
-    cos_angle = max(-1.0, min(1.0, cos_angle))
-
-    return 6371 * acos(cos_angle)
+    R = 6371.0
+    lat1_rad = math.radians(lat1)
+    lon1_rad = math.radians(lon1)
+    lat2_rad = math.radians(lat2)
+    lon2_rad = math.radians(lon2)
+    dlat = lat2_rad - lat1_rad
+    dlon = lon2_rad - lon1_rad
+    a = math.sin(dlat / 2)**2 + math.cos(lat1_rad) * math.cos(lat2_rad) * math.sin(dlon / 2)**2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    distance = R * c
+    return distance

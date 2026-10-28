@@ -1,4 +1,3 @@
-n = int(input())
-
-for i in range(0, n+1):
-    print('*' * i)
+num = int(input("Enter number "))
+for i in range(0,num+1):
+    print(i * "*")

@@ -1,17 +1,18 @@
 def caesar_cipher(text, shift):
-    abc = 'abcdefghijklmnopqrstuvwxyz'
-    abc_upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    result = ''
-    i = 0
-    for char in text:
-        if char in abc:
-            cur_inx = abc.index(char)
-            shifted_idx = (cur_inx + shift) % 26
-            result += abc[shifted_idx]
-        elif char in abc_upper:
-            cur_inx = abc_upper.index(char)
-            shifted_idx = (cur_inx + shift) % 26
-            result += abc_upper[shifted_idx]
+    itog = ""
+    
+    for simvol in text:
+        if simvol.isupper():
+            a = ord(simvol) - ord('A')
+            b = (a + shift) % 26
+            v = b + ord('A')
+            itog = itog + chr(v)
+        elif simvol.islower():
+            a = ord(simvol) - ord('a')
+            b = (a + shift) % 26
+            v = b + ord('a')
+            itog = itog + chr(v)
         else:
-            result += char
-    return result
+            itog = itog + simvol
+            
+    return itog

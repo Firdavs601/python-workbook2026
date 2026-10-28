@@ -1,16 +1,18 @@
-total_cents = 0
-payment = 0
+
+total = 0
 while True:
-    n = input()
-    if n == "":
+    a = input()
+    if a == "":
         break
-    n = float(n) * 100
-    total_cents+=n
-print(total_cents / 100)
-
-if total_cents % 5 < 2.5:
-    total_cents -= total_cents % 5
+    total = total + float(a)
+print(f"Total: ${total:.2f}") 
+b = round(total * 100)
+ostatok = b % 5
+if ostatok < 2.5:
+    b -= ostatok
+    total = b / 100
+    print(f"Cash payment: ${total:.2f}")
 else:
-    total_cents += 5 - total_cents % 5
-
-print(f"{total_cents/100:.2f}")
+    b += (5 - ostatok)
+    total = b / 100
+    print(f"Cash payment: ${total:.2f}") 

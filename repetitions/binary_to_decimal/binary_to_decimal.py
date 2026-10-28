@@ -1,8 +1,7 @@
-n = input()
-res = 0
-c = 0
-for i in n[::-1]:
-    res += int(i) * 2 ** c
-    c += 1
+binary = input()
 
-print(res)
+result = 0
+for digit in binary:
+    result = result * 2 + int(digit)
+
+print("The decimal equivalent is", result)

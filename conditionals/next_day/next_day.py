@@ -23,9 +23,6 @@ elif month == 2:
         last_day_of_the_month = 29
     else:
         last_day_of_the_month = 28
-# else last day of the month is 31 as in the start
-
-
 if month == 12 and day == 31:
     year += 1
     month = 1

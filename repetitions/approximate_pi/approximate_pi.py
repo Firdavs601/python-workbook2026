@@ -1,12 +1,16 @@
-pi = 3
-flag = 1
-print(f"{pi:.2f}")
-for i in range(2, 30, 2):
-    if flag:
-        pi = pi + 4 / (i * (i + 1) * (i + 2))
-        print(pi)
-        flag = 0
+pi = 3.0
+print(f"Approximation 1: {pi}")
+
+n = 2
+
+for i in range(2, 16):
+    denominator = n * (n + 1) * (n + 2)
+    fraction = 4.0 / denominator
+    
+    if i % 2 == 0:
+        pi = pi + fraction
     else:
-        pi = pi - 4 / (i * (i + 1) * (i + 2))
-        print(pi)
-        flag = 1
+        pi = pi - fraction
+        
+    print(f"Approximation {i}: {pi}")
+    n = n + 2

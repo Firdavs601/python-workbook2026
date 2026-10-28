@@ -1,24 +1,27 @@
-months = ["Invalid month number", 'January', 'February', 'March', 'April', 'May', 'June',
-          'July', 'August', 'September', 'October', 'November', 'December']
-
-i = int(input())
-
-if i <= len(months) - 1 and (i > 0):
-    print(months[i])
+month = int(input("Enter number"))
+if month == 1:
+    print("January")
+elif month == 2:
+    print("Fabruary")
+elif month == 3:
+    print("March")
+elif month == 4:
+    print("April"),
+elif month == 5:
+    print("May")
+elif month == 6:
+    print ("June")
+elif month == 7:
+    print("July")
+elif month == 8:
+    print("August")
+elif month == 9:
+    print("September")
+elif month == 10: 
+    print("October")
+elif month == 11:
+    print("November")
+elif month == 12:
+    print("December")
 else:
-    print(months[0])
-
-
-"""Examples
-Example 1:
-
-1
-January
-Example 2:
-
-6
-June
-Example 3:
-
-13
-Invalid month number"""
+    print("Invalid month number")

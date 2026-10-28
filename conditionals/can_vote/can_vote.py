@@ -7,7 +7,6 @@ Voting age is 18 in most countries
 Use the simple comparison operator
 Handle integer ages"""
 age = int(input())
-
 if age >= 18:
     print("can vote")
 else:

@@ -1,8 +1,6 @@
-"""Formula
-Volume = (4/3) × π × radius³"""
-from math import pi
-r = float(input())
+# Volume = (4/3) × π × radius³
+import math
+radius = int(input())
 
-volume = 4/3 * pi * r**3
-
-print(f"{volume:.2f}")
+Volume = (4/3) * math.pi * (radius ** 3)
+print(f"{Volume:.2f}")
