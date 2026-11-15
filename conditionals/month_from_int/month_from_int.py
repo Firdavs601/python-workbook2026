@@ -2,7 +2,7 @@ month = int(input("Enter number"))
 if month == 1:
     print("January")
 elif month == 2:
-    print("Fabruary")
+    print("February")
 elif month == 3:
     print("March")
 elif month == 4:
